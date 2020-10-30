@@ -1,0 +1,19 @@
+{
+	"name": "pollu",
+	"version": 2,
+	"env": {
+		"DB_PATH": "@db_path",
+		"DB_NAME": "@db_name",
+		"SENTRY_KEY": "@sentry"
+	},
+	"redirects": [
+		{
+			"source": "/about",
+			"destination": "https://github.com/KL13NT/pollu"
+		},
+		{
+			"source": "/issues",
+			"destination": "https://github.com/KL13NT/pollu/issues"
+		}
+	]
+}

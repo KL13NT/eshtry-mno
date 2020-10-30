@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.rtl {
+	direction: rtl;
+}
+
+body {
+	@apply font-rtl;
+}
+
+.button {
+	@apply p-2 rounded-lg capitalize text-center font-bold text-lg border-2 border-transparent transition-all duration-200;
+}
+
+[disabled=''] .button {
+	@apply cursor-not-allowed opacity-50;
+}
+
+[disabled=''] .button:focus,
+[disabled=''] .button:active {
+	@apply border-transparent;
+}
+
+.input {
+	@apply py-2 pl-4 pr-2 rounded-lg border-2 transition-all duration-200 text-lg w-full outline-none;
+}
+
+.input::placeholder {
+	@apply opacity-50;
+}
+
+.input:active::placeholder,
+.input:focus::placeholder {
+	@apply opacity-75;
+}
+
+.toast {
+	@apply button m-auto fixed left-0 top-0 right-0 w-full block normal-case rounded-none;
+
+	animation-name: fall;
+	animation-duration: 0.5s;
+	animation-fill-mode: forwards;
+	animation-iteration-count: 1;
+	animation-play-state: running;
+	animation-timing-function: cubic-bezier(1, 0, 0, 1);
+}
+
+.loader,
+.loader:after {
+	border-radius: 50%;
+	width: 1.125rem;
+	height: 1.125rem;
+}
+
+.loader {
+	margin: 0 auto;
+	position: relative;
+	border-top: 1rem solid rgba(255, 255, 255, 0.2);
+	border-right: 1rem solid rgba(255, 255, 255, 0.2);
+	border-bottom: 1rem solid rgba(255, 255, 255, 0.2);
+	border-left: 1rem solid #ffffff;
+	animation: load8 1.1s infinite linear;
+}
+
+@keyframes load8 {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes fall {
+	0% {
+		transform: translateY(-300%);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
