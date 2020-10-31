@@ -1,9 +1,5 @@
 {
 	"version": 2,
-	"env": {
-		"DB_PATH": "@db_path",
-		"DB_NAME": "@db_name"
-	},
 	"redirects": [
 		{
 			"source": "/github",
