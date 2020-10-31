@@ -6,12 +6,12 @@ import Footer from './Footer.jsx'
 
 export default function Layout({ children }) {
 	return (
-		<div className='font-rtl rtl px-4 pb-24'>
+		<div className='font-rtl rtl px-4 pb-24 mt-4'>
 			<noscript>
 				<Toast>Creating polls and voting require JavaScript.</Toast>
 			</noscript>
 
-			<nav className='flex justify-around mx-auto w-1/5'>
+			<nav className='flex justify-evenly md:justify-around mx-auto md:w-1/5'>
 				<Route href='/'>
 					<img src='/uranus.svg' alt='home icon' className='w-12' />
 				</Route>
