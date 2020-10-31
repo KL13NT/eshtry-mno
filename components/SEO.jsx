@@ -18,7 +18,7 @@ const Images = ({ image }) => (
 )
 
 function SEO({ title, url, description = defaults.description }) {
-	const finalTitle = title ? `${title} | اشتري منه` : defaults.title
+	const finalTitle = title ? `${title} - اشتري منه` : defaults.title
 
 	return (
 		<>
@@ -67,8 +67,7 @@ function SEO({ title, url, description = defaults.description }) {
 				<meta name='msapplication-config' content='/icons/browserconfig.xml' />
 				<meta name='theme-color' content='#ffffff' />
 			</Head>
-
-			<Images image='https://eshtry-mno.vercel.app/cover.png' />
+			<Images image='https://eshtry-mno.vercel.app/assets/cover.png' />
 		</>
 	)
 }

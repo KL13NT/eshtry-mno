@@ -13,7 +13,7 @@ export default function Layout({ children }) {
 
 			<nav className='flex justify-evenly md:justify-around mx-auto md:w-1/5'>
 				<Route href='/'>
-					<img src='/uranus.svg' alt='home icon' className='w-12' />
+				<img src='/uranus.svg' alt='home icon' className='w-12' />
 				</Route>
 				<Route href='/search'>
 					<img src='/search.svg' alt='search icon' className='w-12' />
