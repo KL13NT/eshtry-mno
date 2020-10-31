@@ -2,10 +2,11 @@ import React from 'react'
 
 import { Toast } from './Toast.jsx'
 import Route from './Route.jsx'
+import Footer from './Footer.jsx'
 
 export default function Layout({ children }) {
 	return (
-		<div className='font-rtl rtl px-4'>
+		<div className='font-rtl rtl px-4 pb-24'>
 			<noscript>
 				<Toast>Creating polls and voting require JavaScript.</Toast>
 			</noscript>
@@ -19,8 +20,14 @@ export default function Layout({ children }) {
 				</Route>
 			</nav>
 
-			<div className='bg-blue-300 w-full mx-auto rounded-lg rtl p-4 min-h-full'>
+			<div className='w-full mx-auto rounded-lg rtl p-4 max-w-screen-md'>
+				<h1 className='font-bold text-center text-4xl text-blue-600'>
+					🔥 إشْتِري مِنُّه 🔥
+				</h1>
+
 				{children}
+
+				<Footer />
 			</div>
 		</div>
 	)

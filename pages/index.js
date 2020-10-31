@@ -72,9 +72,9 @@ const IndexPage = () => {
 	return (
 		<>
 			<SEO />
-			<div className='mx-auto max-w-screen-md'>
-				<div className='bg-blue-600 rounded-lg mx-auto p-4 px-6 mt-12'>
-					<h1 className='text-2xl m-0'>
+			<div className='mx-auto'>
+				<div className='bg-blue-600 rounded-lg mx-auto p-12 px-6 mt-12'>
+					<h1 className='text-2xl m-0 mt-4'>
 						تعرف محل قريب منك شال البضاعة الفرنسية من عنده؟ قول لنا عليه!
 					</h1>
 					<form className='mt-4' onSubmit={onSubmit} ref={formRef}>
@@ -100,12 +100,6 @@ const IndexPage = () => {
 						{toast ? <Toast className='mt-8'>{toast}</Toast> : null}
 					</form>
 				</div>
-				<p className='mt-8 text-black'>
-					<strong>اشتري منه</strong> ﻫﻲ ﺧﺪﻣﺔ ﻣﺠﺎﻧﻴﺔ ﻣﺒﻨﻴﺔ ﻋﺸﺎن ﺗﺴﻬﻞ اﻟﻮﺻﻮل
-					ﻟﻠﻤﺤﻠﺎت اﻟﻠﻲ ﺷﺎﻟﺖ اﻟﺒﻀﺎﻋﺔ اﻟﻔﺮﻧﺴﻴﺔ ﻣﻦ ﻋﻨﺪﻫﺎ. ﺗﻘﺪروا ﺗﻌﻤﻠﻮا ﺑﺤﺚ ﻓﻲ ﺻﻔﺤﺔ
-					اﻟﺒﺤﺚ ﻋﻠﻰ ﻣﻜﺎﻧﻜﻮا وﺗﺸﻮﻓﻮا اﻟﻤﺤﻠﺎت اﻟﻘﺮﻳﺒﻪ ﻣﻨﻜﻢ, او ﺗﻌﻤﻠﻮا ﻣﻨﺸﻮر ﺟﺪﻳﺪ
-					ﺗﻘﻮﻟﻮﻟﻨﺎ ﻓﻴﻪ ﻋﻦ ﻣﺤﻞ ﺗﻌﺮﻓﻮه.
-				</p>
 			</div>
 		</>
 	)

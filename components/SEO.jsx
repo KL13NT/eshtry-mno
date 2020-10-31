@@ -40,11 +40,6 @@ function SEO({ title, url, description = defaults.description }) {
 
 				<link rel='manifest' href='/manifest.webmanifest' />
 
-				<meta name='msapplication-TileColor' content='#202040' />
-				<meta name='msapplication-config' content='/icons/browserconfig.xml' />
-				<meta name='theme-color' content='#202040' />
-				<link rel='shortcut icon' href='/icons/favicon.ico' />
-
 				<link
 					rel='apple-touch-icon'
 					sizes='180x180'
@@ -67,10 +62,10 @@ function SEO({ title, url, description = defaults.description }) {
 					href='/icons/safari-pinned-tab.svg'
 					color='#5bbad5'
 				/>
-				<meta
-					name='msapplication-TileImage'
-					content='/icons/mstile-144x144.png'
-				/>
+				<link rel='shortcut icon' href='/icons/favicon.ico' />
+				<meta name='msapplication-TileColor' content='#2b5797' />
+				<meta name='msapplication-config' content='/icons/browserconfig.xml' />
+				<meta name='theme-color' content='#ffffff' />
 			</Head>
 
 			<Images image='https://eshtry-mno.vercel.app/cover.png' />
