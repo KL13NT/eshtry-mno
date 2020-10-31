@@ -1,8 +1,8 @@
 import React from 'react'
 
-import { Button } from '../src/components/Button.jsx'
+import Button from '../components/Button.jsx'
 
-import SEO from '../src/components/SEO.jsx'
+import SEO from '../components/SEO.jsx'
 
 const reload = () => window.location.reload()
 const defaults = {

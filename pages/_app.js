@@ -1,8 +1,8 @@
 import React from 'react'
 
-import Layout from '../src/components/Layout.jsx'
+import Layout from '../components/Layout.jsx'
 
-import '../src/styles/index.css'
+import '../styles/index.css'
 
 export default function App({ Component, pageProps }) {
 	return (
