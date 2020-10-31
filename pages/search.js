@@ -1,11 +1,11 @@
-import React, { useRef, useState } from 'react'
+import React, { useState } from 'react'
 
 import Loader from '../components/Loader.jsx'
 import SEO from '../components/SEO.jsx'
 import Button from '../components/Button.jsx'
+import Result from '../components/Result.jsx'
 
 import { useToasts, Toast } from '../components/Toast.jsx'
-import Result from '../components/Result.jsx'
 
 const options = {
 	enableHighAccuracy: true,
@@ -32,7 +32,11 @@ const Loading = () => (
 	<ul>
 		{new Array(10).fill(0).map((e, i) => (
 			<li key={i} className='mt-8'>
-				<img src='/result.svg' alt='loading placeholder' />
+				<img
+					src='/result.svg'
+					alt='loading placeholder'
+					className='max-w-full'
+				/>
 			</li>
 		))}
 	</ul>
@@ -46,11 +50,11 @@ const IndexPage = () => {
 	const onSuccess = ({ coords }) => {
 		const { latitude, longitude } = coords
 
-		fetch(`/api/v1/search?lat=${latitude}&long=${longitude}`)
+		fetch(`/api/v1/search?latitude=${latitude}&longitude=${longitude}`)
 			.then(res => res.json())
 			.then(results => {
 				setResults(results)
-				setToast('دي النتايج اللي لقيتها')
+				setToast(null)
 			})
 			.catch(() => {
 				setToast('⛔ في مشكلة حصلت. جرب تاني, لو الموضوع اتكرر ابعتلنا!')
@@ -83,12 +87,12 @@ const IndexPage = () => {
 			<SEO />
 			<div className='mx-auto max-w-screen-md'>
 				{results.length === 0 ? (
-					<div className='bg-blue-600 rounded-lg mx-auto p-4 px-6 mt-12 flex items-center justify-between'>
+					<div className='bg-blue-600 rounded-lg mx-auto p-4 px-6 mt-12 text-center md:text-right md:flex items-center justify-between'>
 						<h1 className='text-2xl m-0 block'>
 							عايزين تعرفوا المحلات القريبة منكم اللي شالوا المنتجات الفرنسية؟
 						</h1>
 						<Button
-							className='block transition-all'
+							className='block transition-all mx-auto md:mx-0 mt-4 md:mt-0'
 							onClick={onSearch}
 							disabled={loading}
 						>
@@ -96,7 +100,7 @@ const IndexPage = () => {
 						</Button>
 					</div>
 				) : (
-					<div className='bg-white rounded-lg mx-auto p-4 px-6 mt-12 flex items-center justify-center flex-wrap'>
+					<div className='bg-white shadow hover:shadow-lg transition-all duration-200 rounded-lg mx-auto p-4 px-6 mt-12 flex items-center justify-center flex-wrap'>
 						<h1 className='text-2xl m-0 block text-blue-600 font-bold'>
 							دي المحلات اللي لقيتها قريبة منكم (مسافة 10 كيلو)
 						</h1>
@@ -118,7 +122,7 @@ const IndexPage = () => {
 
 				{results.length === 0 ? (
 					<p className='text-blue-600 font-bold text-center'>
-						المفروض يظهر هنا النتايج
+						المفروض يظهر هنا النتايج (الصفحة دي بتتحدث كل 60 ثانية)
 					</p>
 				) : null}
 			</div>

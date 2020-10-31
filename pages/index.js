@@ -27,13 +27,23 @@ const IndexPage = () => {
 		const name = form.get('name')
 
 		const body = {
-			coords,
-			name
+			name,
+			location: {
+				coordinates: {
+					longitude: coords.longitude,
+					latitude: coords.latitude
+				}
+			}
 		}
 
-		fetch('/api/v1/register', {
+		fetch('/api/v1/create', {
 			method: 'POST',
-			body: JSON.stringify(body)
+			body: JSON.stringify(body),
+			mode: 'cors',
+			credentials: 'same-origin',
+			headers: {
+				'Content-Type': 'application/json'
+			}
 		})
 			.then(res => {
 				if (res.ok)
@@ -80,7 +90,8 @@ const IndexPage = () => {
 					<form className='mt-4' onSubmit={onSubmit} ref={formRef}>
 						<Input
 							id='name'
-							label='name'
+							name='name'
+							label='Store name'
 							placeholder='اسم المحل وعنوانه ...'
 							className='w-full'
 							required
@@ -89,6 +100,7 @@ const IndexPage = () => {
 							⚠️ قبل ما تسجلوا محل جديد اتأكدوا انه مش موجود حواليكوا في صفحة
 							البحث
 						</p>
+						<p>✔️ تقدروا تسجلوا محلين فقط كل 15 دقيقة</p>
 						<Button
 							type='submit'
 							className='mt-8 mx-auto block transition-all'

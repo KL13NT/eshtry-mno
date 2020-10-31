@@ -8,7 +8,7 @@ export default function Layout({ children }) {
 	return (
 		<div className='font-rtl rtl px-4 pb-24 mt-4'>
 			<noscript>
-				<Toast>Creating polls and voting require JavaScript.</Toast>
+				<Toast>لازم تشغل جافاسكربت عندك عشان الموقع يشتغل كويس.</Toast>
 			</noscript>
 
 			<nav className='flex justify-evenly md:justify-around mx-auto md:w-1/5'>
