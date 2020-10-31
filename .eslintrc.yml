@@ -9,6 +9,7 @@ parserOptions:
   ecmaVersion: 11
 rules:
   react/prop-types: 0
+  newline-per-chained-call: 0
   no-tabs: 0
   indent: 0
   object-curly-newline: 0

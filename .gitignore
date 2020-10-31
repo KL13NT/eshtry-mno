@@ -85,3 +85,6 @@ yarn-error.log*
 # Local vscode workspace settings
 .vscode
 .vercel
+
+# MongoDB local data files
+data
