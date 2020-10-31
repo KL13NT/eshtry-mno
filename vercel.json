@@ -1,19 +1,17 @@
 {
-	"name": "pollu",
 	"version": 2,
 	"env": {
 		"DB_PATH": "@db_path",
-		"DB_NAME": "@db_name",
-		"SENTRY_KEY": "@sentry"
+		"DB_NAME": "@db_name"
 	},
 	"redirects": [
 		{
-			"source": "/about",
-			"destination": "https://github.com/KL13NT/pollu"
+			"source": "/github",
+			"destination": "https://github.com/KL13NT/eshtry-mno"
 		},
 		{
 			"source": "/issues",
-			"destination": "https://github.com/KL13NT/pollu/issues"
+			"destination": "https://github.com/KL13NT/eshtry-mno/issues"
 		}
 	]
 }

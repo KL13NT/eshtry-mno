@@ -5,6 +5,9 @@
 	"version": "0.1.0",
 	"author": "Nabil Tharwat <nabil.tharwat@outlook.com>",
 	"dependencies": {
+		"cors": "^2.8.5",
+		"express": "^4.17.1",
+		"mongoose": "^5.10.11",
 		"next": "^9.5.4",
 		"prop-types": "^15.7.2",
 		"react": "^16.12.0",

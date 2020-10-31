@@ -1,5 +1,5 @@
 {
-  "projectName": "pollu",
+  "projectName": "eshtry-mno",
   "projectOwner": "KL13NT",
   "repoType": "github",
   "repoHost": "https://github.com",
@@ -9,52 +9,6 @@
   "imageSize": 100,
   "commit": true,
   "commitConvention": "angular",
-  "contributors": [
-    {
-      "login": "BamButz",
-      "name": "BamButz",
-      "avatar_url": "https://avatars1.githubusercontent.com/u/7022144?v=4",
-      "profile": "https://github.com/BamButz",
-      "contributions": [
-        "code"
-      ]
-    },
-    {
-      "login": "mojiwa",
-      "name": "Mo Jiwa",
-      "avatar_url": "https://avatars2.githubusercontent.com/u/14992663?v=4",
-      "profile": "https://github.com/mojiwa",
-      "contributions": [
-        "code"
-      ]
-    },
-    {
-      "login": "saptarsi96",
-      "name": "Saptarsi Saha",
-      "avatar_url": "https://avatars1.githubusercontent.com/u/29809001?v=4",
-      "profile": "https://www.linkedin.com/in/saptarsi29/",
-      "contributions": [
-        "code"
-      ]
-    },
-    {
-      "login": "karleypetracca",
-      "name": "Karley Petracca",
-      "avatar_url": "https://avatars1.githubusercontent.com/u/39736230?v=4",
-      "profile": "https://github.com/karleypetracca",
-      "contributions": [
-        "code"
-      ]
-    },
-    {
-      "login": "sybiljas",
-      "name": "Sybil Jas",
-      "avatar_url": "https://avatars3.githubusercontent.com/u/51464288?v=4",
-      "profile": "https://github.com/sybiljas",
-      "contributions": [
-        "code"
-      ]
-    }
-  ],
+  "contributors": [],
   "contributorsPerLine": 7
 }
